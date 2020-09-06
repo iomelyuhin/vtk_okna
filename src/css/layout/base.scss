@@ -1,0 +1,112 @@
+/*! ======================================================================================== */
+/*! =========================================LAYOUT========================================= */
+/*! ======================================================================================== */
+
+html, body {
+  height: 100%;
+  width: 100%;
+	font-size: 18px;
+	font-family: $f;
+}
+
+body {
+  font-family: $f;
+  -webkit-font-snoothing: antialiased;
+  -moz-osx-font-snoothing: grayscale;
+  color: #000;
+  line-height: 1;
+  font-size: rem(18px);
+  
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  display: flex;
+  border: none;
+  background: transparent;
+	cursor: pointer;
+	outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+	max-width: 100%;
+}
+
+input {
+	outline: none;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  min-height: 100%;
+	width: 100%; 
+	// overflow: hidden;
+  position: relative;
+	z-index: 0;
+	// background: url("/img/content/bg/bg_vector.png") right -50px top -80px no-repeat, url("/img/content/bg/bg_ellipse.png") left -33px top 700px no-repeat, linear-gradient(180deg, #8564B3 0%, #53338C 43.96%, #58338F 62.25%, #7D2FA8 108.15%);
+}
+.section {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.section--header {
+  z-index: 12;
+}
+.section--page {
+  z-index: 11;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+.section--footer {
+  z-index: 9;
+}
+
+.page {
+  flex-grow: 1;
+  width: 100%;
+  margin-top: 0;
+  // padding-top: 50px;
+  padding-bottom: 50px;
+  align-content: flex-start;
+}
+.page__title h1 {
+  font-size: 1em;
+  font-weight: inherit;
+}
+
+.container {
+	width: 90%;
+}

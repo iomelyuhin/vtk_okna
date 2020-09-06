@@ -1,0 +1,189 @@
+// ================================================
+// =====================cases======================
+// ================================================
+
+.cases {
+	background-image: url('/img/content/sepia_bg.jpg');
+	padding-bottom: 75px;
+}
+
+.cases__title {
+	margin-top: 66px;
+	margin-bottom: 60px;
+}
+// ================cases SLIDER=====================
+.cases__slider {
+  position: relative;
+  width: 100%;
+  // height: 80vh;
+  // margin: 50px auto 0;
+  /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
+  user-select: none;
+  /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
+  touch-action: pan-y;
+}
+
+/* Если где-то внутри слайдера будут изображения,
+то нужно задать им pointer-events: none,
+чтобы они не перетаскивались мышью */
+
+.cases__slider-slide-image-wrap {
+  pointer-events: none;
+}
+
+.cases__slider-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cases__slider-wrapper.grab {
+  cursor: grab;
+}
+
+.cases__slider-wrapper.grabbing{
+  cursor: grabbing;
+}
+
+.cases__slider-track {
+  display: flex;
+}
+
+.cases__slider-slide {
+  width: 100%;
+  // height: 80vh;
+  /* Чтобы слайды не сжимались */
+  flex-shrink: 0;
+  /* Увеличиваем и центрируем цифру внутри слайда */
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+	// border: 1px solid #000;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+
+.cases__slider-arrows {
+  margin-top: 15px;
+	text-align: center;
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.cases__slider-index {
+	display: none;
+	color: #fff;
+}
+
+.next,
+.prev {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  font-size: 30px;
+	cursor: pointer;
+	color: #000;
+}
+
+.next.disabled,
+.prev.disabled {
+  opacity: .25;
+  pointer-events: none;
+}
+
+// =============================SLIDE==================================
+.cases__slider-wrap {
+	background-color: rgba($text-black, 0.5);
+	width: 100%;
+	height: 100%;
+}
+.cases__slider-slide-content {
+	display: flex;
+	height: 100%;
+}
+
+.cases__slider-slide-title h1 {
+	font-size: 48px;
+	font-weight: 900;
+	color: #fff;
+}
+
+.cases__slider-slide-desc {
+	margin-top: 57px;
+	background-image: $red-gr;
+  font-size: 60px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  -webkit-background-clip: text;
+  background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 2px #ffffff;
+	white-space: nowrap;
+}
+
+
+.cases__slider-slide-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 55%;
+	flex-shrink: 0;
+}
+
+.cases__slider-slide-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// width: 45%;
+	flex-shrink: 0;
+	position: absolute;
+	width: 70%;
+	left: 0;
+	height: 100%;
+	z-index: -1;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+
+}
+
+.cases__slider-slide-info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	background: $blue-gr;
+	width: 30%;
+	min-height: 580px;
+	padding: 48px 20px 66px 34px;
+}
+
+.cases__slider-slide-info-list {
+}
+
+.cases__slider-slide-info-item {
+	margin-bottom: 43px;
+}
+
+.cases__slider-slide-info-title {
+	font-weight: 900;
+	font-size: 30px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.cases__slider-slide-info-desc {
+	font-size: 18px;
+	color: #fff;
+}

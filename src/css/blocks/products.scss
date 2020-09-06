@@ -1,0 +1,113 @@
+// ==================================================
+// =====================products=====================
+// ==================================================
+
+.products {
+  background: url("/img/content/sepia_bg.jpg");
+  padding-top: 56px;
+}
+
+.products__list {
+  display: flex;
+	justify-content: space-between;
+	margin: 60px 0;
+}
+
+.products__item {
+	position: relative;
+	width: 30%;
+
+  .products__item-bg::before {
+    content: "";
+    display: flex;
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &:first-child {
+    .products__item-bg::before {
+      background-color: #3a3285;
+    }
+  }
+  &:nth-child(2) {
+    .products__item-bg::before {
+      background-color: #e31f25;
+    }
+  }
+  &:nth-child(3) {
+    .products__item-bg::before {
+      background-color: #009847;
+    }
+  }
+}
+
+.products__item-wrap {
+  display: flex;
+  max-width: 361px;
+  height: 465px;
+  position: relative;
+  padding: 15px 24px;
+  align-items: flex-end;
+	box-shadow: 1.5px 4.8px 20px 0 rgba(0, 0, 0, 0.15);
+	
+	
+	&:hover {
+		.products__item-icon--windows {
+			background: url("/img/icons/window-hover.png") center center no-repeat;
+		}
+		.products__item-icon--roof {
+			background: url("/img/icons/roof-hover.png") center center no-repeat;
+		}
+		.products__item-icon--front {
+			background: url("/img/icons/front-hover.png") center center no-repeat;
+		}
+		.products__item-text {
+			color: $red;
+		}
+	}
+}
+
+.products__item-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.products__item-img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.products__item-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.products__item-icon {
+  width: 48px;
+	height: 42px;
+	background-size: contain;
+}
+
+.products__item-icon--windows {
+  background: url("/img/icons/window.png") center center no-repeat;
+}
+.products__item-icon--roof {
+  background: url("/img/icons/roof.png") center center no-repeat;
+}
+.products__item-icon--front {
+  background: url("/img/icons/front.png") center center no-repeat;
+}
+
+.products__item-text {
+  font-weight: 900;
+  font-size: 20px;
+  text-transform: uppercase;
+	margin-left: 16px;
+	// transition: 0.3s;
+}

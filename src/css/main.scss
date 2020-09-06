@@ -1,0 +1,34 @@
+//colors
+$blueberry: #3a2e88;
+$text-black: #141515;
+$red:#df351b;
+$green-gr: linear-gradient(to top, #58be04, #d7df00);
+$red-gr: linear-gradient(to top, #dd2a1b, #f07e1e);
+$blue-gr: linear-gradient(to top, #3a2e88, #00c8f4);
+// $green-gr-hover: linear-gradient(to top, #58be04, #58be04);
+
+//media
+$bp-desktop-hd: "1800px";
+$bp-desktop: "1260px";
+$bp-tablets-hor: "992px";
+$bp-tablets: "768px";
+$bp-phones: "575px";
+$bp-phones-mini: "420px";
+
+//fonts
+$f: 'Montserrat', sans-serif;
+$bold: 700;
+$reg: 400;
+$black: 900;
+
+// //rem function
+// @function rem ($px) {
+//   @return $px / 18px + 0rem;
+// }
+
+//layout
+@import './mixins.scss';
+@import './libs/slider.scss';
+@import './layout/*.scss';
+@import './blocks/*.scss';
+@import './libs/hamburgers/hamburgers.scss';

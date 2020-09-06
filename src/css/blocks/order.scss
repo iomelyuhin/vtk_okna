@@ -1,0 +1,112 @@
+.order {
+	padding: 33px 0 50px 0;
+	background: url('/img/content/man.png') no-repeat;
+	background-size: 620px;
+	width: 100%;
+	background-position-y: bottom;
+	background-position-x: 30%;
+	position: relative;
+	margin-bottom: 143px;
+	z-index: -1;
+}
+
+.order__desc {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 24px;
+	color: #1b1b1b;
+}
+
+.order__content {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	margin-top: 36px;
+	margin-bottom: 100px;
+}
+
+.form {
+	background: $blue-gr;
+	padding: 45px 45px 30px 50px;
+	max-width: 420px;
+	border-radius: 10px;
+}
+
+.form__body {
+	width: 100%;
+}
+
+.form__field-inner {
+	margin-bottom: 20px;
+}
+
+.form__submit {
+	width: 100%;
+	padding: 20px 25px;
+	font-size: 18px;
+}
+
+.form__submit span {
+	font-family: $f;
+}
+
+.form__field--focusable .form__field-element {
+	height: initial;
+	padding: 20px 25px;
+	border-radius: 10px;
+}
+
+.form__policy {
+	margin-top: 20px;
+}
+
+.form__policy-label {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.form__policy-check {
+	appearance: none;
+}
+
+.form__policy-input {
+	display: flex;
+	align-items: center;
+}
+
+.form__policy-fake-input {
+	width: 36px;
+	height: 36px;
+	background-color: #fff;
+	border-radius: 10px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&::after {
+		content: "";
+		opacity: 0;
+		display: flex;
+		position: absolute;
+		width: 20px;
+		height: 17px;
+		background: url('/img/icons/check.png') center center no-repeat;
+		transition: 0.3s;
+	}
+}
+
+.form__policy-check:checked+.form__policy-fake-input::after {
+	opacity: 1;
+}
+
+.form__policy-text {
+	margin-left: 12px;
+	font-size: 14px;
+	color: #fff;
+
+	a {
+		color: $red;
+	}
+}
