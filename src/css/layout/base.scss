@@ -64,6 +64,14 @@ input {
 	outline: none;
 }
 
+.body-fix {
+
+	@include phones {
+
+		overflow: hidden;
+	}
+}
+
 .sections {
   display: flex;
   flex-direction: column;

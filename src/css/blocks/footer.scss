@@ -64,6 +64,11 @@
 	align-self: start;
 	margin-top: 20px;
 
+	@include tablets {
+		margin-left: 25px;
+		margin-bottom: 20px;
+	}
+
 }
 
 .footer__main-phone-link {
@@ -81,6 +86,11 @@
 	font-weight: $bold;
 	margin-left: 10px;
 	color: #fff;
+
+	@include tablets {
+		margin-left: 0;
+		margin-bottom: 10px;
+	}
 }
 
 .footer__main-calc-btn {
@@ -106,4 +116,24 @@
 	margin-bottom: 30px;
 	color: #fff;
 	font-size: 14px;
+}
+
+.footer__calc {
+	@include tablets {
+		display: none;
+	}
+}
+
+.footer__contacts-wrapper {
+	display: flex;
+
+	@include tablets {
+		flex-direction: column-reverse;
+	}
+}
+
+.footer__logo-img {
+	@include phones {
+		max-width: 60px;
+	}
 }

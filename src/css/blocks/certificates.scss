@@ -1,0 +1,44 @@
+.section--certificates {
+	margin-top: 60px;
+}
+
+.certificates__list {
+	margin-top: 56px;
+	display: flex;
+
+	@include tablets {
+		flex-wrap: nowrap;
+		overflow-x: scroll;
+		scroll-snap-type: y mandatory;
+		/* scroll-padding: 50%; */
+		overflow: -moz-scrollbars-none;
+	}
+}
+
+.certificates__item {
+	width: calc(100% / 3);
+	padding: 0 calc(78px / 2);
+	// &:last-child {
+	// 	padding-right: 0;
+	// }
+
+	@include tablets {
+		scroll-snap-align: start;
+		min-width: 40%;
+		padding: 20px;
+	}
+
+	@include phones {
+		min-width: 60%;
+	}
+}
+
+.certificates__item-border {
+	padding: 12px;
+	background: #ededeb;
+	box-shadow: 0.9px 2.9px 5px 0 rgba(0, 0, 0, 0.5);
+	
+	img {
+		min-width: 100%;
+	}
+}

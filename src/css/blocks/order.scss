@@ -8,6 +8,21 @@
 	position: relative;
 	margin-bottom: 143px;
 	z-index: -1;
+	
+	@include tablets-hor {
+		background-position-x: 10%;
+	}
+	@include tab {
+		background-position-x: 0;
+	}
+	
+	@include tablets {
+		background-position-x: 38%;
+		background-position-y: 35%;
+		background-size: 400px;
+
+		
+	}
 }
 
 .order__desc {
@@ -23,6 +38,10 @@
 	width: 100%;
 	margin-top: 36px;
 	margin-bottom: 100px;
+
+	@include tablets {
+		justify-content: center;
+	}
 }
 
 .form {
@@ -30,6 +49,10 @@
 	padding: 45px 45px 30px 50px;
 	max-width: 420px;
 	border-radius: 10px;
+
+	@include tablets {
+		margin-top: 230px;
+	}
 }
 
 .form__body {

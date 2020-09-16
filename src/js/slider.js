@@ -1,5 +1,5 @@
 document.addEventListener(`DOMContentLoaded`, function () {
-  function slider_run(js_slider, js_sliderList, js_sliderTrack, js_slides, js_arrows) {
+  function slider_run(js_slider, js_sliderList, js_sliderTrack, js_slides, js_arrows, js_qty) {
     let slider = document.querySelector(js_slider),
       sliderList = slider.querySelector(js_sliderList),
       sliderTrack = slider.querySelector(js_sliderTrack),
@@ -25,7 +25,8 @@ document.addEventListener(`DOMContentLoaded`, function () {
       prevTrf = 0,
       lastTrf = --slides.length * slideWidth,
       posThreshold = slides[0].offsetWidth * 0.35,
-      trfRegExp = /([-0-9.]+(?=px))/,
+			trfRegExp = /([-0-9.]+(?=px))/,
+			qty = js_qty
       getEvent = function () {
         return event.type.search("touch") !== -1 ? event.touches[0] : event;
       },
@@ -37,8 +38,8 @@ document.addEventListener(`DOMContentLoaded`, function () {
           slideIndex * slideWidth
         }px, 0px, 0px)`;
 
-        prev.classList.toggle("disabled", slideIndex === 0);
-        next.classList.toggle("disabled", slideIndex === slides.length - 1);
+        prev.classList.toggle("disabled", slideIndex == 0);
+        next.classList.toggle("disabled", slideIndex == slides.length - qty);
       },
       swipeStart = function () {
         let evt = getEvent();
@@ -97,7 +98,7 @@ document.addEventListener(`DOMContentLoaded`, function () {
           }
 
           // запрет ухода вправо на последнем слайде
-          if (slideIndex === --slides.length) {
+          if (slideIndex === slides.length - qty) {
             if (posInit > posX1) {
               setTransform(transform, lastTrf);
               return;
@@ -195,18 +196,41 @@ document.addEventListener(`DOMContentLoaded`, function () {
     indexSlideText.innerHTML = `${slideIndex + 1}/${slides.length}`;
   }
 
-  slider_run(
-    ".js__slider",
-    ".js__slider-list",
-    ".js__slider-track",
-    ".js__slide",
-    ".js__slider-arrows"
-  );
-  slider_run(
-    ".js__cases-slider",
-    ".js__cases-slider-list",
-    ".js__cases-slider-track",
-    ".js__cases-slide",
-    ".js__cases-slider-arrows"
-  );
+	if (document.querySelector(".js__slider")) {
+		slider_run(
+			".js__slider",
+			".js__slider-list",
+			".js__slider-track",
+			".js__slide",
+			".js__slider-arrows",
+			1
+		);	
+	}
+	if (document.querySelector(".js__cases-slider")) {
+		slider_run(
+			".js__cases-slider",
+			".js__cases-slider-list",
+			".js__cases-slider-track",
+			".js__cases-slide",
+			".js__cases-slider-arrows",
+			1
+		);	
+	}
+	if (document.querySelector(".js__add-slider")) {
+		let qtySlides = 4
+		if (window.innerWidth <= 1100) {
+			qtySlides=3
+		} 
+		slider_run(
+			".js__add-slider",
+			".js__add-slider-list",
+			".js__add-slider-track",
+			".js__add-slide",
+			".js__add-slider-arrows",
+			qtySlides
+		);	
+	}
+  
+  
+  
 });

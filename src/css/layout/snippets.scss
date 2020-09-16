@@ -34,7 +34,7 @@
 	._underline:hover                {  text-decoration:none;}
 	._underline--revers              {  text-decoration:none;}
 	._underline--revers:hover        {  text-decoration:underline;}
-	._title h2                       {  
+	._title h2, ._title h1           {  
 																			font-weight: 900;
 																			font-size: 36px; 
 																			color: #1b1b1b;
@@ -44,13 +44,20 @@
 																			position: relative;
 																			display: flex;
 																			justify-content: center;
-																			white-space: nowrap;
+																			// white-space: nowrap;
+																			flex-shrink: 0;
+																			max-width: 90%;
+																			width: fit-content;
+																			@include phones {
+																				font-size: 28px;
+																			}
 	}
 	._title 													{
 																			width: fit-content;
 																			display: flex;
 																			justify-content: center;
 																			width: 100%;
+																			
 	}
 
 	._title::before 									{
@@ -75,9 +82,46 @@
 																			color: #fff;
 																			text-transform: uppercase;
 																			background: $red-gr;
-																			padding: 14px 30px;
+																			padding: 14px 0;
+																			display: flex;
+																			justify-content: center;
 																			border-radius: 10px;
+																			white-space: nowrap;
+																			min-width: 190px;
+																			width: 100%;
 	}
+	._main-title h1		                 {  
+																			font-size: 48px;
+																			font-weight: 900;
+																			text-transform: uppercase;
+																		
+																			@include phones {
+																				font-size: 35px;
+																				text-align: center;
+																			}
+	}
+	._main-desc                    {  
+																			background-image: $red-gr;
+																			font-size: 55px;
+																			font-weight: 900;
+																			font-stretch: normal;
+																			font-style: normal;
+																			line-height: 1;
+																			letter-spacing: normal;
+																			text-align: left;
+																			color: #ffffff;
+																			-webkit-background-clip: text;
+																			background-clip: text;
+																			-webkit-text-fill-color: transparent;
+																			-webkit-text-stroke: 2px #ffffff;
+																			white-space: nowrap;
+																			@include phones {
+																				font-size: 30px;
+																				margin-top: 10px;
+																				text-align: center;
+																			}
+	}
+	
 
 	@media screen and (max-width: 575px){ 
 		._tablet._desctop{  display: none !important;}

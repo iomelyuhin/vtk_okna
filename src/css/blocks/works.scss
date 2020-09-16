@@ -1,0 +1,60 @@
+.section--works {
+	margin-top: 80px;
+	margin-bottom: 30px;
+}
+
+.works__desc {
+	color: #888787;
+	font-size: 24px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.works__content {
+	margin-top: 47px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include phones {
+		flex-direction: column;
+	}
+}
+
+.works__image {
+	width: 50%;
+	flex-shrink: 0;
+	margin-right: 70px;
+	display: flex;
+	justify-content: flex-end;
+	
+	img {
+		max-width: 286px;
+
+	}
+
+	@include phones {
+		margin-right: 0;
+		margin-bottom: 30px;
+		width: 100%;
+	}
+}
+
+.works__button {
+	width: 50%;
+	flex-shrink: 0;
+
+	@include phones {
+		width: 100%;
+	}
+}
+
+.works__btn {
+	width: 100%;
+	max-width: 325px;
+	background-image: linear-gradient(to top, #2e77a4, #73a9d1);
+	padding: 21px 0;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+}

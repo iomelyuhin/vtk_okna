@@ -2,190 +2,294 @@
 // =====================header=====================
 // ================================================
 .header {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .header__cart {
-	background-color: $blueberry;
-	height: 34px;
+  background-color: $blueberry;
+  // height: 34px;
 }
 
 .header__cart-wrap {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 	height: 100%;
+	padding: 10px 0;
+	
+	@include phones {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 }
 
 .header__cart-info {
-	display: flex;
+  display: flex;
 }
 
 .header__cart-icon {
-	width: 18px;
-	height: 17px;
+  width: 18px;
+  height: 17px;
 }
 
 .header__cart-price,
 .header__cart-price-qty {
-	margin-left: 10px;
-	font-size: 15px;
-	color: #fff;
-	display: flex;
-	align-items: center;
+  margin-left: 10px;
+  font-size: 15px;
+  color: #fff;
+  display: flex;
+  align-items: center;
 }
 
 .header__cart-price-qty {
-	span {
-		border-radius: 100%;
-		margin: 0  5px;
-		width: 20px;
-		height: 20px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #fff;
-		color: $blueberry;
-	}
+  span {
+    border-radius: 100%;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: $blueberry;
+  }
 }
 
 .header__cart-button-link {
-	font-size: 15px;
-	display: flex;
-	align-items: center;
-	margin-left: 44px;
-	border-bottom: 1px solid #fff;
-	color: #fff;
-	transition: 0.3s;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  margin-left: 44px;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  transition: 0.3s;
 
-	&:hover {
-		border-bottom: 1px solid transparent;
-	}
+  &:hover {
+    border-bottom: 1px solid transparent;
+  }
 }
 
 .header__main {
-	display: flex;
-	justify-content: space-between;
-	padding: 12px 0;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  align-items: center;
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .header__main-company {
+  display: flex;
+  align-items: center;
+  width: 45%;
+
+  @include tablets {
+    width: 100%;
+    justify-content: space-between;
+	}
+	
+	@include phones {
+		width: 100%;
+		flex-direction: column;
+	}
+}
+
+.header__main-company-info {
 	display: flex;
 	align-items: center;
-	width: 45%;
 }
 
 .header__main-company-desc {
-	font-size: 18px;
-	font-weight: 900;
-	color: $text-black;
-	text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+  color: $text-black;
+  text-transform: uppercase;
+  @include tablets {
+    font-size: 14px;
+    margin-left: 10px;
+    max-width: 230px;
+  }
 }
 
 .header__main-logo {
-	flex-shrink: 0;
-	img {
-		max-width: 124px;
+  flex-shrink: 0;
+  img {
+    max-width: 124px;
+    @include tablets {
+      max-width: 80px;
+		}
 		
-	}
+		@include phones {
+			max-width: 70px;
+		}
+  }
 }
 
 .header__main-calc-btn {
-	display: flex;
-	padding: 8px 22px;
-	justify-content: space-between;
-	background: $green-gr;
-	height: 64px;
-	border-radius: 10px;
-	align-items: center;
-	cursor: pointer;
+  display: flex;
+  padding: 8px 22px;
+  justify-content: space-between;
+  background: $green-gr;
+  height: 64px;
+  border-radius: 10px;
+  align-items: center;
+  cursor: pointer;
 
+  @include tablets {
+    margin: 20px auto;
+    width: fit-content;
+  }
 }
 
-
 .header__main-calc-btn-text {
-	font-size: 14px;
-	font-weight: $bold;
-	text-transform: uppercase;
-	color: #fff;
-	margin-left: 14px;
+  font-size: 14px;
+  font-weight: $bold;
+  text-transform: uppercase;
+  color: #fff;
+  margin-left: 14px;
 }
 
 .header__main-contacts-item {
-	display: flex;
-	align-items: center;
-	margin-bottom: 30px;
-	font-size: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 15px;
 
-	&:last-child {
-		margin-bottom: 0;
-	}
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .header__main-call {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 	align-items: flex-end;
+	
+	@include phones {
+		margin-top: 20px;
+	}
 }
 
 .header__main-contacts-item-icon {
-	width: 18px;
-	margin-right: 10px;
+  width: 18px;
+  margin-right: 10px;
 }
 
 .header__main-phone-link {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header__main-phone-link-icon {
-	width: 18px;
-	margin-right: 10px;
+  width: 18px;
+  margin-right: 10px;
 }
 
 .header__main-phone-link-text {
-	font-size: 20px;
-	color: $text-black;
-	font-weight: $bold;
-	white-space: nowrap;
+  font-size: 20px;
+  color: $text-black;
+  font-weight: $bold;
+  white-space: nowrap;
+
+  @include tablets {
+    font-size: 18px;
+	}
+
+	@include phones {
+		font-size: 20px;
+	}
+	
 }
 
 .header__main-call-back {
-	margin-top: 8px;
+  margin-top: 8px;
+}
+
+.header__navigation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 .header__navigation {
-	background: $blue-gr;
+  background: $blue-gr;
 }
 
 .header__navigation-list {
-	display: flex;
+  display: flex;
+
+  @include phones {
+    display: none;
+  }
 }
 
 .header__navigation-item-link {
-	font-size: 14px;
-	text-transform: uppercase;
-	color: #fff;
-	display: flex;
-	align-items: center;
-	padding: 19px 5px;
-	position: relative;
-	
-	&::after {
-		content: "";
-		display: flex;
-		width: 1px;
-		height: 42px;
-		opacity: 0.21;
-		background-color: #ffffff;
-		position: absolute;
-		right: 0;
-	}
-	&:hover {
-		background: $red-gr;
-	}
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 19px 5px;
+  position: relative;
+  text-align: center;
+
+  &::after {
+    content: "";
+    display: flex;
+    width: 1px;
+    height: 42px;
+    opacity: 0.21;
+    background-color: #ffffff;
+    position: absolute;
+    right: 0;
+  }
+  &:hover {
+    background: $red-gr;
+  }
 }
 
+.header__mobile-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 30%;
+  min-width: 300px;
+  background-color: $blueberry;
+  display: none;
+  border-radius: 0 0 20px 20px;
+
+  &.active {
+    display: block;
+  }
+
+  .header__navigation-item-link {
+    padding-left: 20px;
+    &::after {
+      display: none;
+    }
+  }
+
+  .header__main-contacts {
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(#fff, 0.2);
+  }
+  .header__main-contacts-item-text {
+    color: #fff;
+	}
+	
+	@include phones {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		// background: $blue-gr;
+		background: $blueberry;
+		top: 0;
+		left: 0;
+		border-radius: initial;
+	}
+}

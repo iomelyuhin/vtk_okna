@@ -1,0 +1,17 @@
+button.hamburger {
+	display: none;
+	z-index: 10;
+	@include tablets-hor {
+		display: block;
+	}
+
+	@include phones {
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		background-color: rgba($blueberry, 0.85);
+		border-radius: 100%;
+		width: 53px;
+		height: 53px;
+	}
+}

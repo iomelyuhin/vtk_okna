@@ -1,0 +1,43 @@
+.breadcrumbs {
+	margin-top: 32px;
+
+	@include phones {
+		display: none;
+	}
+}
+
+.breadcrumbs__list {
+	display: flex;
+}
+
+.breadcrumbs__item {
+	display: flex;
+	align-items: center;
+	&:after {
+		content: "/";
+		padding: 0 10px;
+		display: flex;
+		font-size: 14px;
+		color: $blue;
+	}
+	
+	&:last-child {
+		.breadcrumbs__link {
+			color: $text-grey;
+			pointer-events: none;
+		}
+		&::after {
+			display: none;
+		}
+
+	}
+}
+
+.breadcrumbs__link {
+	
+	font-size: 14px;
+	color: $blue;
+	&:hover {
+		color: $red;
+	}
+}
