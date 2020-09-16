@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div class="sections">
+		<div class="section section--header">
+			<div class="header">
+				<div class="header__cart">
+					<div class="header__cart-wrap _wrapper">
+						<div class="header__cart-info">
+							<div class="header__cart-icon">
+								<img class="header__cart-icon-pic" src="/img/icons/cart.png" alt="Корзина">
+							</div>
+							<div class="header__cart-price">Ваша корзина: 1766,18 ₽</div>
+							<div class="header__cart-price-qty">(<span>2</span> товара</span>)</div>
+						</div>
+						<div class="header__cart-button">
+							<a href="/" class="header__cart-button-link">Оформить заказ</a>
+						</div>
+					</div>
+				</div>
+				<div class="header__main _wrapper">
+					<div class="header__main-company">
+						<div class="header__main-company-info">
+							<div class="header__main-logo">
+								<img src="/img/content/logo.png" alt="" class="header__mail-logo-pic">
+							</div>
+							<div class="header__main-company-desc">производство пластиковых окон, дверей и алюминиевых конструкций
+							</div>
+						</div>
+					</div>
+					<div class="header__main-calc-btn" data-da="header__mobile-menu,7,768">
+						<img src="/img/icons/calc.png" alt="" class="header__main-calc-btn-icon">
+						<div class="header__main-calc-btn-text">онлайн<br /> расчёт</div>
+					</div>
+					<div class="header__main-contacts" data-da="header__mobile-menu,6,1100">
+						<a href="/" class="header__main-contacts-item">
+							<img src="/img/icons/mail.png" alt="" class="header__main-contacts-item-icon">
+							<div class="header__main-contacts-item-text">mail@vtk43.com</div>
+						</a>
+						<a href="/" class="header__main-contacts-item">
+							<img src="/img/icons/vk.png" alt="" class="header__main-contacts-item-icon">
+							<div class="header__main-contacts-item-text">vk.com/kirov43vtk</div>
+						</a>
+					</div>
+					<div class="header__main-call" data-da="header__main-company,3,768">
+						<a href="" class="header__main-phone-link">
+							<img class="header__main-phone-link-icon" src="/img/icons/phone.png" alt="">
+							<div class="header__main-phone-link-text">+7 (8332) 32-94-32</div>
+						</a>
+						<button type="button" class="header__main-call-back _main-button">Перезвоните мне</button>
+					</div>
+				</div>
+				<div class="header__navigation">
+					<div class="header__navigation-wrapper _wrapper">
+						<div class="header__navigation-list">
+							<div class="header__navigation-item" data-da="header__mobile-menu,0,768">
+								<a class="header__navigation-item-link" href="/">Главная</a>
+							</div>
+							<div class="header__navigation-item" data-da="header__mobile-menu,1,575">
+								<a class="header__navigation-item-link" href="/all-products.html">Окна и двери</a>
+							</div>
+							<div class="header__navigation-item" data-da="header__mobile-menu,1,575">
+								<a class="header__navigation-item-link" href="/">Кровельные материалы</a>
+							</div>
+							<div class="header__navigation-item" data-da="header__mobile-menu,2,575">
+								<a class="header__navigation-item-link" href="/">Фасадные материалы</a>
+							</div>
+							<div class="header__navigation-item" data-da="header__mobile-menu,3,1100">
+								<a class="header__navigation-item-link" href="/">О компании</a>
+							</div>
+							<div class="header__navigation-item" data-da="header__mobile-menu,4,1100">
+								<a class="header__navigation-item-link" href="/">Доставка и оплата</a>
+							</div>
+							<div class="header__navigation-item" data-da="header__mobile-menu,5,1100">
+								<a class="header__navigation-item-link" href="/">Контакты</a>
+							</div>
+						</div>
+						<button class="hamburger hamburger--collapse" type="button" aria-label="navigation-menu">
+							<span class="hamburger-box" data-name="menu">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>
+						<div class="header__mobile-menu">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="section section--breadcrumbs">
+			<div class="breadcrumbs _wrapper">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="/" class="breadcrumbs__link">Главная</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="/all-products.html" class="breadcrumbs__link">Кровельные материалы </a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="section section--roof">
+			<div class="roof">
+				<div class="roof__title _title">
+					<h2>Калькулятор кровли</h2>
+				</div>
+
+				<div class="roof__content">
+					<div class="roof__settings">
+						<div class="roof__settings-wrap">
+							<label class="roof__settings-label">
+								<div class="roof__settings-title">
+									<h3>Выберите тип крыши</h3>
+								</div>
+								<select name="type" id="roofType">
+									<option value="mansard">Мансардная</option>
+									<option value="mansard+">Мансардная с верадной</option>
+									<option value="hole">Дырявая</option>
+								</select>
+							</label>
+							<label class="roof__settings-label">
+								<div class="roof__settings-title">
+									<h3>Длина ската 2 (Н2), м</h3>
+								</div>
+								<input type="text" name="length2" class="roof__settings-text-input">
+							</label>
+							<label class="roof__settings-label">
+								<div class="roof__settings-title">
+									<h3>Ширина ската 1 (W1), м</h3>
+								</div>
+								<input type="text" name="width1" class="roof__settings-text-input">
+							</label>
+							<label class="roof__settings-label">
+								<div class="roof__settings-title">
+									<h3>Длина ската 3 (Н3), м</h3>
+								</div>
+								<input type="text" name="length3" class="roof__settings-text-input">
+							</label>
+							<label class="roof__settings-label">
+								<div class="roof__settings-title">
+									<h3>Ширина ската 2 (W2), м</h3>
+								</div>
+								<input type="text" name="width2" class="roof__settings-text-input">
+							</label>
+							<label class="roof__settings-label">
+								<div class="roof__settings-title">
+									<h3>Длина ската 4 (Н4), м</h3>
+								</div>
+								<input type="text" name="length4" class="roof__settings-text-input">
+							</label>
+							<label class="roof__settings-label">
+								<div class="roof__settings-title">
+									<h3>Длина ската 1 (Н1), м</h3>
+								</div>
+								<input type="text" name="length1" class="roof__settings-text-input">
+							</label>
+							<label class="roof__settings-label">
+								<div class="roof__settings-title">
+									<h3>Длина ската 5 (Н5), м</h3>
+								</div>
+								<input type="text" name="length5" class="roof__settings-text-input">
+							</label>
+						</div>
+						<div class="roof__settings-wrap">
+							<div class="roof__settings-wrap-half">
+								<div class="roof__settings-radio-wrap">
+									<div class="roof__settings-title">
+										<h3>Материал</h3>
+									</div>
+									<label class="roof__settings-label">
+										<input type="radio" name="material" class="roof__settings-text-input">
+										<div class="roof__settings-radio-value">Профнастил</div>
+									</label>
+									<label class="roof__settings-label">
+										<input type="radio" name="material" class="roof__settings-text-input">
+										<div class="roof__settings-radio-value">Профнастил</div>
+									</label>
+								</div>
+								<div class="roof__settings-radio-wrap">
+									<div class="roof__settings-title">
+										<h3>Тип профнастила</h3>
+									</div>
+									<label class="roof__settings-label">
+										<input type="radio" name="type" class="roof__settings-text-input">
+										<div class="roof__settings-radio-value">Окрашеный</div>
+									</label>
+									<label class="roof__settings-label">
+										<input type="radio" name="type" class="roof__settings-text-input">
+										<div class="roof__settings-radio-value">Оцинкованный</div>
+									</label>
+								</div>
+								<div class="roof__settings-radio-wrap">
+									<div class="roof__settings-title">
+										<h3>Дополнительные материалы</h3>
+									</div>
+									<label class="roof__settings-label">
+										<input type="radio" name="additional" class="roof__settings-text-input">
+										<div class="roof__settings-radio-value">Окрашеный</div>
+									</label>
+									<label class="roof__settings-label">
+										<input type="radio" name="additional" class="roof__settings-text-input">
+										<div class="roof__settings-radio-value">Оцинкованный</div>
+									</label>
+								</div>
+							</div>
+							<div class="roof__settings-wrap-half">
+								<div class="roof__settings-radio-wrap">
+									<div class="roof__settings-title">
+										<h3>Демонтаж старого покрытия</h3>
+									</div>
+									<label class="roof__settings-label">
+										<input type="radio" name="dismant" class="roof__settings-text-input">
+										<div class="roof__settings-radio-value">Не нужно</div>
+									</label>
+									<label class="roof__settings-label">
+										<input type="radio" name="dismant" class="roof__settings-text-input">
+										<div class="roof__settings-radio-value">Шифер</div>
+									</label>
+									<label class="roof__settings-label">
+										<input type="radio" name="dismant" class="roof__settings-text-input">
+										<div class="roof__settings-radio-value">Рубероид</div>
+									</label>
+									<label class="roof__settings-label">
+										<input type="radio" name="dismant" class="roof__settings-text-input">
+										<div class="roof__settings-radio-value">Железо</div>
+									</label>
+									<label class="roof__settings-label">
+										<input type="radio" name="dismant" class="roof__settings-text-input">
+										<div class="roof__settings-radio-value">Резиновый шифер</div>
+									</label>
+								</div>
+								<label class="roof__settings-label">
+									<input type="checkbox" class="roof__settings-text-input">
+									<div class="roof__settings-radio-value">Дымовая труба</div>
+								</label>
+								<label class="roof__settings-label">
+									<div class="roof__settings-radio-value">Количество труб</div>
+									<input type="text" class="roof__settings-text-input" placeholder="1">
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="roof__total">
+						<div class="roof__total-image">
+							<img src="/img/content/roof.png" alt="" class="roof__total-img">
+						</div>
+						<div class="roof__total-price-wrap">
+							<div class="roof__total-price-text">Стоимость вашей кровли</div>
+							<div class="roof__total-price-total">66 900 р.</div>
+						</div>
+						<div class="roof__total-button">
+							<button class="roof__total-btn _main-button">Заказать</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="section section--order order">
+			<div class="order__title _title">
+				<h2>Закажите бесплатный замер</h2>
+			</div>
+			<div class="order__desc">Оставьте свой телефон и мы Вам перезвоним</div>
+			<div class="order__wrap _wrapper">
+				<div class="order__content">
+					<form action="" method='POST' enctype="multipart/form-data" class="form js__form">
+						<div class="form__thanks"></div>
+
+						<div class="form__body">
+							<div class="form__fields">
+								<div class='form__fieldset'>
+									<div class="form__field form__field--input form__field--focusable">
+										<div class="form__field-inner">
+											<div class="form__field-input">
+												<input class='form__field-element input' name='fullname'>
+												<div class="form__field-placeholder _upper">
+													<div>ИМЯ*</div>
+												</div>
+												<div class='form__field-error'></div>
+											</div>
+										</div>
+										<div class="form__field-inner">
+											<div class="form__field-input">
+												<input class='form__field-element input' name='phone'>
+												<div class="form__field-placeholder _upper">
+													<div>+7 (ХХХ) ХХХ-ХХ-ХХ*</div>
+												</div>
+												<div class='form__field-error'></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form__footer">
+							<div class="form__pps">
+							</div>
+							<div class="form__actions _center">
+								<button class="form__submit button button--main _main-button" type='submit' id=''>
+									<span>Заказать звонок</span>
+								</button>
+							</div>
+							<div class="form__policy">
+								<label class="form__policy-label">
+									<div class="form__policy-input">
+										<input type="checkbox" class='form__field-element form__field--checkboxses form__policy-check'
+											name='check'>
+										<div class="form__policy-fake-input"></div>
+									</div>
+									<div class="form__policy-text">Согласен с <a href="/" class="form__policy-link">публичной офертой</a>
+									</div>
+								</label>
+
+							</div>
+							<!-- <div class="form__field-inner">
+									<div class="form__field-input">
+										<div class='form__field-error'></div>
+									</div>
+								</div> -->
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="order__separator">
+				<img class="order__separator-img" src="/" alt="">
+			</div>
+		</div>
+		<div class="section section--footer section--footer-main">
+			<div class="footer _wrapper">
+				<div class="footer__row">
+					<div class="footer__row-wrap">
+						<div class="footer__logo">
+							<img class="footer__logo-img" src="/img/content/logo.png" alt="">
+						</div>
+						<div class="footer__contacts-wrapper">
+
+							<div class="footer__contacts">
+								<a href="/" class="footer__main-contacts-item">
+									<img src="/img/icons/mail.png" alt="" class="footer__main-contacts-item-icon">
+									<div class="footer__main-contacts-item-text">mail@vtk43.com</div>
+								</a>
+								<a href="/" class="footer__main-contacts-item">
+									<img src="/img/icons/vk.png" alt="" class="footer__main-contacts-item-icon">
+									<div class="footer__main-contacts-item-text">vk.com/kirov43vtk</div>
+								</a>
+							</div>
+							<div class="footer__phone">
+								<a href="" class="footer__main-phone-link">
+									<img class="footer__main-phone-link-icon" src="/img/icons/phone.png" alt="">
+									<div class="footer__main-phone-link-text">+7 (8332) 32-94-32</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__calc">
+						<div class="footer__main-calc-btn">
+							<img src="/img/icons/calc.png" alt="" class="footer__main-calc-btn-icon">
+							<div class="footer__main-calc-btn-text">онлайн<br /> расчёт</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__row">
+					<div class="footer__copy">© 2020 «ВТК» — производство пластиковых окон, дверей и алюминиевых конструкций</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup js__popup">
+		<div class="popup__container">
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/libs/dynad.js"></script>
+</body>
+
+</html>
