@@ -1,0 +1,209 @@
+// ===================================================
+// ======================CART=========================
+// ===================================================
+
+
+.cart__table {
+	margin-top: 50px;
+	border-bottom: 4px solid #d5d5d5;
+	width: 100%;
+}
+
+.cart__table-head {
+	@include phones {
+		display: none;
+	}
+}
+
+.cart__table-head th {
+	padding: 22px 0;
+	background-color: #d5d5d5;
+}
+
+.cart__title-product {
+	text-align: left;
+
+	@include tablets {
+		text-align: center;
+	}
+}
+
+.cart__goods-title {
+	@include phones {
+		text-align: center;
+	}
+}
+
+.cart__table-body tr {
+	td {
+		padding-top: 30px;
+
+		@include tablets {
+			padding: 30px 5px 0 5px;
+		}
+		
+		@include phones {
+			padding: 20px 5px 0 5px;
+
+		}
+	}
+	
+	&:last-child {
+		td {
+			padding-bottom: 30px;
+			
+		}
+	}
+
+	td {
+		@include phones {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		&::before {
+			@include phones {
+				content: attr(data-name);
+				display: flex;
+				font-weight: bold;
+				font-size: 18px;
+				margin-bottom: 5px;
+			}
+		}
+		
+	}
+	
+
+		@include phones {
+			// display: flex;
+			border-bottom: 1px solid #d5d5d5;
+		}
+
+}
+
+.cart__image {
+	width: 100px;
+	height: 84px;
+	border: 2px solid #d5d5d5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include tablets {
+		display: none;
+	}
+	@include phones {
+		display: flex;
+	}
+}
+
+.cart__price,
+.cart__total-price {
+	font-size: 24px;
+	text-align: center;
+	color: #acaaaa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+
+	&::after {
+		content: "₽";
+		display: flex;
+		margin-left: 5px;
+	}
+}
+
+.cart__total-price {
+}
+
+.cart__total-price-td {
+	@include tablets {
+		display: none;
+	}
+
+}
+
+.cart__total-qty {
+	display: flex;
+	justify-content: center;
+}
+
+.cart__total-qty-btn {
+  border-radius: 10px;
+  background-color: #183665;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 30px;
+	line-height: 0.8;
+	transition: 0.3s;
+	
+	&:hover {
+		background-color: #295aa7;
+	}
+}
+
+.cart__total-qty-input {
+  max-width: 80px;
+  padding-left: 16px 0;
+  text-align: center;
+  font-size: 18px;
+  color: #1b1b1b;
+  border: solid 2px #d5d5d5;
+  background-color: #ffffff;
+  border-radius: 7px;
+  margin: 0 3px;
+}
+
+.cart__remove-btn {
+	width: 48px;
+	height: 48px;
+	background-image: url('/img/icons/delete.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	margin-left: 50px;
+	
+	@include tablets {
+		margin-left: 0;
+	}
+
+	@include phones {
+		margin-bottom: 20px;
+	}
+	
+	&:hover {
+		background-image: url('/img/icons/delete-hover.png');
+	}
+}
+
+.cart__summary {
+	margin-top: 38px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.cart__summary-price {
+	font-size: 30px;
+	font-weight: 900;
+	color: #1b1b1b;
+
+	span {
+		font-size: 36px;
+		color: #295aa7;
+		font-weight: bold;
+	}
+}
+
+.cart__summary-btn {
+	margin-top: 45px;
+	padding: 16px 0;
+	font-size: 16px;
+	min-width: 262px;
+}

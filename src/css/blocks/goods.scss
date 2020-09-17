@@ -1,0 +1,238 @@
+// ===================================================
+// ======================GOODS========================
+// ===================================================
+
+.section--goods {
+  margin-top: 34px;
+}
+
+.goods__wrapper {
+  margin-top: 48px;
+	display: flex;
+	
+	@include phones {
+		flex-direction: column;
+	}
+}
+
+.goods__images {
+  width: 40%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+	align-items: center;
+	
+	@include tablets {
+		width: 50%;
+	}
+
+	@include phones {
+		width: 100%;
+	}
+}
+
+.goods__image-main {
+  width: 100%;
+  max-width: 458px;
+  min-height: 380px;
+  border: solid 2px #d5d5d5;
+  display: flex;
+  justify-content: center;
+	align-items: center;
+	
+	@include phones {
+		min-height: 260px;
+	}
+}
+
+.goods__content {
+  width: 60%;
+  flex-shrink: 0;
+	display: flex;
+	
+	@include tablets {
+		width: 50%;
+		flex-direction: column;
+	}
+
+	@include phones {
+		width: 100%;
+		margin-top: 28px;
+	}
+}
+
+.goods__features,
+.goods__total {
+  width: 50%;
+  display: flex;
+	flex-direction: column;
+	@include tablets {
+		width: 100%;
+	}
+}
+
+.goods__images-list {
+  display: flex;
+  margin-top: 13px;
+  align-self: flex-start;
+}
+
+.goods__images-item {
+  max-width: 100px;
+  min-height: 84px;
+  border: solid 2px #d5d5d5;
+  margin-right: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &.active {
+    border: solid 2px #295aa7;
+  }
+}
+
+.goods__features {
+  padding-left: 28px;
+}
+
+.goods__features-title h3 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1b1b1b;
+}
+
+.goods__features-list {
+  margin-top: 10px;
+}
+
+.goods__features-item {
+  display: flex;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.goods__features-item-title {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.goods__total {
+	padding-left: 28px;
+	margin-top: 28px;
+
+	@include phones {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-left: 0;
+	}
+}
+
+.goods__price-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #295aa7;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "₽";
+    display: flex;
+    margin-left: 3px;
+  }
+}
+
+.goods__price-desc {
+  font-size: 14px;
+  color: #acaaaa;
+  margin-top: 18px;
+}
+
+.goods__total-qty {
+  display: flex;
+  margin-top: 30px;
+}
+
+.goods__total-qty-btn {
+  border-radius: 10px;
+  background-color: #183665;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 30px;
+	line-height: 0.8;
+	transition: 0.3s;
+	
+	&:hover {
+		background-color: #295aa7;
+	}
+}
+
+.goods__total-qty-input {
+  max-width: 80px;
+  padding-left: 16px 0;
+  text-align: center;
+  font-size: 18px;
+  color: #1b1b1b;
+  border: solid 2px #d5d5d5;
+  background-color: #ffffff;
+  border-radius: 7px;
+  margin: 0 3px;
+}
+
+.goods__total-price {
+	margin-top: 15px;
+
+	@include phones {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.goods__total-price-desc {
+  font-size: 14px;
+  color: #acaaaa;
+}
+
+.goods__total-price-text {
+  font-size: 24px;
+  color: #acaaaa;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 16px;
+
+  &::after {
+    content: "₽";
+    display: flex;
+    margin-left: 3px;
+  }
+}
+
+.goods__total-button {
+  margin-top: 40px;
+  max-width: 262px;
+}
+
+.goods__desc {
+	margin-top: 35px;
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1b1b1b;
+	}
+	
+	p {
+		font-size: 14px;
+		line-height: 1.71;
+		color: #1b1b1b;
+	}
+}

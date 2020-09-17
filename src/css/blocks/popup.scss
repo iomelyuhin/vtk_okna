@@ -1,0 +1,26 @@
+// ===================================================
+// ===================POPUP===========================
+// ===================================================
+
+.popup {
+	display: none;
+	
+	&.active {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(#000, 0.7);
+		align-items: center;
+		justify-content: center;
+		display: flex;
+	}
+}
+
+.popup__container {
+
+	.form {
+		margin-top: 0;
+	}
+}

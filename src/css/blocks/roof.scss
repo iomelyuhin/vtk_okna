@@ -1,0 +1,239 @@
+// ===================================================
+// ======================ROOF=========================
+// ===================================================
+
+.section--roof {
+	margin-top: 30px;
+}
+
+.roof__content {
+	display: flex;
+	align-items: center;
+
+	@include tab {
+		flex-direction: column;
+	}
+}
+
+.roof__settings {
+	width: calc(100% / 3 * 2);
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	margin-top: 43px;
+
+	@include tab {
+		width: 100%;
+	}
+}
+
+.roof__settings-wrap {
+	// width: 50%;
+	display: flex;
+	flex-shrink: 0;
+	flex-wrap: wrap;
+}
+
+.roof__settings-label {
+	// padding-right: 28px;
+	width: 50%;
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+
+	@include phones {
+		width: 100%;
+	}
+}
+
+.roof__settings-text-input {
+	width: calc(100% - 28px);
+	border: solid 2px #d5d5d5;
+	outline: none;
+	padding: 15px 16px;
+	font-size: 18px;
+	color: #716f6f;
+	border-radius: 3px;
+
+	@include phones {
+		width: 100%;
+	}
+}
+
+.roof__settings-title {
+	font-size: 18px;
+	color: #1b1b1b;
+	margin-bottom: 13px;
+}
+
+.roof__settings-label-radio {
+	display: flex;
+	justify-content: flex-start;
+	cursor: pointer;
+	align-items: center;
+	margin-bottom: 15px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.roof__settings-radio-input {
+	opacity: 0;
+	appearance: none;
+}
+
+.roof__settings-radio-fake {
+	width: 26px;
+	height: 26px;
+	border-radius: 100%;
+	flex-shrink: 0;
+	border: solid 2px #d5d5d5;
+	position: relative;
+
+	&::after {
+		content: "";
+		opacity: 0;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 14px;
+		height: 14px;
+		border-radius: 100%;
+		background-color: #295aa7;
+		transform: translate(-50%, -50%);
+		transition: 0.3s;
+	}
+}
+
+.roof__settings-radio-input:checked+.roof__settings-radio-fake::after {
+	opacity: 1;
+}
+
+.roof__settings-radio-value {
+	margin-left: 10px;
+	font-size: 18px;
+	color: #716f6f;
+}
+
+.roof__settings-wrap-half {
+	width: 50%;
+	padding-right: 28px;
+
+	@include phones {
+		width: 100%;
+	}
+}
+
+.roof__settings-radio-wrap {
+	border: solid 2px #d5d5d5;
+	padding: 14px 18px;
+	margin-bottom: 30px;
+}
+
+.roof__settings-label--checkbox {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	width: 100%;
+	align-items: center;
+}
+
+.roof__settings-text-input-checkbox {
+	appearance: none;
+}
+
+.roof__settings-text-input-checkbox-fake {
+	width: 26px;
+	height: 26px;
+	background-color: #fff;
+	border-radius: 7px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	border: solid 2px #d5d5d5;
+	align-items: center;
+	&::after {
+		content: "";
+		opacity: 0;
+		display: flex;
+		position: absolute;
+		width: 20px;
+		height: 17px;
+		background: url('/img/icons/check.png') center center no-repeat;
+		transition: 0.3s;
+	}
+}
+
+.roof__settings-text-input-checkbox:checked+.roof__settings-text-input-checkbox-fake::after {
+	opacity: 1;
+}
+
+.roof__settings-label--qty {
+	flex-direction: row;
+	width: 100%;
+	align-items: center;
+}
+
+.roof__settings-radio-value--qty {
+	width: 50%;
+}
+
+.roof__settings-text-input--qty {
+	width: 50%;
+}
+
+.roof__total {
+	width: calc(100%/3);
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	@include tab {
+		margin-top: 30px;
+		width: 100%;
+	}
+}
+
+.roof__total-image {
+	max-width: 364px;
+	width: 100%;
+}
+
+.roof__total-price-wrap {
+	margin-top: 20px;
+}
+
+.roof__total-price-text {
+	font-size: 14px;
+	color: #888787
+}
+
+.roof__total-price-total {
+	font-size: 48px;
+	color: #1b1b1b;
+	text-align: center;
+	font-weight: 900;
+	margin-top: 30px;
+}
+
+.roof__total-button {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	width: 100%;
+}
+
+.roof__total-btn {
+	width: 100%;
+	max-width: 360px;
+	padding: 20px 0;
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+}

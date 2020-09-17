@@ -23,19 +23,19 @@
 							<div class="header__cart-price-qty">(<span>2</span> товара</span>)</div>
 						</div>
 						<div class="header__cart-button">
-							<a href="/" class="header__cart-button-link">Оформить заказ</a>
+							<a href="/cart.html" class="header__cart-button-link">Оформить заказ</a>
 						</div>
 					</div>
 				</div>
 				<div class="header__main _wrapper">
 					<div class="header__main-company">
-						<div class="header__main-company-info">
+						<a href="/" class="header__main-company-info">
 							<div class="header__main-logo">
 								<img src="/img/content/logo.png" alt="" class="header__mail-logo-pic">
 							</div>
 							<div class="header__main-company-desc">производство пластиковых окон, дверей и алюминиевых конструкций
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="header__main-calc-btn" data-da="header__mobile-menu,7,768">
 						<img src="/img/icons/calc.png" alt="" class="header__main-calc-btn-icon">
@@ -69,7 +69,7 @@
 								<a class="header__navigation-item-link" href="/all-products.html">Окна и двери</a>
 							</div>
 							<div class="header__navigation-item" data-da="header__mobile-menu,1,575">
-								<a class="header__navigation-item-link" href="/">Кровельные материалы</a>
+								<a class="header__navigation-item-link" href="/roof.html">Кровельные материалы</a>
 							</div>
 							<div class="header__navigation-item" data-da="header__mobile-menu,2,575">
 								<a class="header__navigation-item-link" href="/">Фасадные материалы</a>
@@ -116,14 +116,14 @@
 					<h2>Калькулятор кровли</h2>
 				</div>
 
-				<div class="roof__content">
+				<div class="roof__content _wrapper">
 					<div class="roof__settings">
 						<div class="roof__settings-wrap">
 							<label class="roof__settings-label">
 								<div class="roof__settings-title">
 									<h3>Выберите тип крыши</h3>
 								</div>
-								<select name="type" id="roofType">
+								<select name="type" id="roofType" class="roof__settings-text-input">
 									<option value="mansard">Мансардная</option>
 									<option value="mansard+">Мансардная с верадной</option>
 									<option value="hole">Дырявая</option>
@@ -174,79 +174,91 @@
 						</div>
 						<div class="roof__settings-wrap">
 							<div class="roof__settings-wrap-half">
+								<div class="roof__settings-title">
+									<h3>Материал</h3>
+								</div>
 								<div class="roof__settings-radio-wrap">
-									<div class="roof__settings-title">
-										<h3>Материал</h3>
-									</div>
-									<label class="roof__settings-label">
-										<input type="radio" name="material" class="roof__settings-text-input">
+									<label class="roof__settings-label-radio">
+										<input type="radio" name="material" class="roof__settings-radio-input">
+										<div class="roof__settings-radio-fake"></div>
 										<div class="roof__settings-radio-value">Профнастил</div>
 									</label>
-									<label class="roof__settings-label">
-										<input type="radio" name="material" class="roof__settings-text-input">
+									<label class="roof__settings-label-radio">
+										<input type="radio" name="material" class="roof__settings-radio-input">
+										<div class="roof__settings-radio-fake"></div>
 										<div class="roof__settings-radio-value">Профнастил</div>
 									</label>
 								</div>
+								<div class="roof__settings-title">
+									<h3>Тип профнастила</h3>
+								</div>
 								<div class="roof__settings-radio-wrap">
-									<div class="roof__settings-title">
-										<h3>Тип профнастила</h3>
-									</div>
-									<label class="roof__settings-label">
-										<input type="radio" name="type" class="roof__settings-text-input">
+									<label class="roof__settings-label-radio">
+										<input type="radio" name="type" class="roof__settings-radio-input">
+										<div class="roof__settings-radio-fake"></div>
 										<div class="roof__settings-radio-value">Окрашеный</div>
 									</label>
-									<label class="roof__settings-label">
-										<input type="radio" name="type" class="roof__settings-text-input">
+									<label class="roof__settings-label-radio">
+										<input type="radio" name="type" class="roof__settings-radio-input">
+										<div class="roof__settings-radio-fake"></div>
 										<div class="roof__settings-radio-value">Оцинкованный</div>
 									</label>
 								</div>
+								<div class="roof__settings-title">
+									<h3>Дополнительные материалы</h3>
+								</div>
 								<div class="roof__settings-radio-wrap">
-									<div class="roof__settings-title">
-										<h3>Дополнительные материалы</h3>
-									</div>
-									<label class="roof__settings-label">
-										<input type="radio" name="additional" class="roof__settings-text-input">
+									<label class="roof__settings-label-radio">
+										<input type="radio" name="additional" class="roof__settings-radio-input">
+										<div class="roof__settings-radio-fake"></div>
 										<div class="roof__settings-radio-value">Окрашеный</div>
 									</label>
-									<label class="roof__settings-label">
-										<input type="radio" name="additional" class="roof__settings-text-input">
+									<label class="roof__settings-label-radio">
+										<input type="radio" name="additional" class="roof__settings-radio-input">
+										<div class="roof__settings-radio-fake"></div>
 										<div class="roof__settings-radio-value">Оцинкованный</div>
 									</label>
 								</div>
 							</div>
 							<div class="roof__settings-wrap-half">
+								<div class="roof__settings-title">
+									<h3>Демонтаж старого покрытия</h3>
+								</div>
 								<div class="roof__settings-radio-wrap">
-									<div class="roof__settings-title">
-										<h3>Демонтаж старого покрытия</h3>
-									</div>
-									<label class="roof__settings-label">
-										<input type="radio" name="dismant" class="roof__settings-text-input">
+									<label class="roof__settings-label-radio">
+										<input type="radio" name="dismant" class="roof__settings-radio-input">
+										<div class="roof__settings-radio-fake"></div>
 										<div class="roof__settings-radio-value">Не нужно</div>
 									</label>
-									<label class="roof__settings-label">
-										<input type="radio" name="dismant" class="roof__settings-text-input">
+									<label class="roof__settings-label-radio">
+										<input type="radio" name="dismant" class="roof__settings-radio-input">
+										<div class="roof__settings-radio-fake"></div>
 										<div class="roof__settings-radio-value">Шифер</div>
 									</label>
-									<label class="roof__settings-label">
-										<input type="radio" name="dismant" class="roof__settings-text-input">
+									<label class="roof__settings-label-radio">
+										<input type="radio" name="dismant" class="roof__settings-radio-input">
+										<div class="roof__settings-radio-fake"></div>
 										<div class="roof__settings-radio-value">Рубероид</div>
 									</label>
-									<label class="roof__settings-label">
-										<input type="radio" name="dismant" class="roof__settings-text-input">
+									<label class="roof__settings-label-radio">
+										<input type="radio" name="dismant" class="roof__settings-radio-input">
+										<div class="roof__settings-radio-fake"></div>
 										<div class="roof__settings-radio-value">Железо</div>
 									</label>
-									<label class="roof__settings-label">
-										<input type="radio" name="dismant" class="roof__settings-text-input">
+									<label class="roof__settings-label-radio">
+										<input type="radio" name="dismant" class="roof__settings-radio-input">
+										<div class="roof__settings-radio-fake"></div>
 										<div class="roof__settings-radio-value">Резиновый шифер</div>
 									</label>
 								</div>
-								<label class="roof__settings-label">
-									<input type="checkbox" class="roof__settings-text-input">
+								<label class="roof__settings-label roof__settings-label--checkbox">
+									<input type="checkbox" class="roof__settings-text-input-checkbox">
+									<div class="roof__settings-text-input-checkbox-fake"></div>
 									<div class="roof__settings-radio-value">Дымовая труба</div>
 								</label>
-								<label class="roof__settings-label">
-									<div class="roof__settings-radio-value">Количество труб</div>
-									<input type="text" class="roof__settings-text-input" placeholder="1">
+								<label class="roof__settings-label roof__settings-label--qty">
+									<div class="roof__settings-radio-value roof__settings-radio-value--qty">Количество труб</div>
+									<input type="text" class="roof__settings-text-input roof__settings-text-input--qty" placeholder="1">
 								</label>
 							</div>
 						</div>
@@ -378,6 +390,63 @@
 	</div>
 	<div class="popup js__popup">
 		<div class="popup__container">
+			<form action="" method='POST' enctype="multipart/form-data" class="form js__form">
+				<div class="form__thanks"></div>
+
+				<div class="form__body">
+					<div class="form__fields">
+						<div class='form__fieldset'>
+							<div class="form__field form__field--input form__field--focusable">
+								<div class="form__field-inner">
+									<div class="form__field-input">
+										<input class='form__field-element input' name='fullname'>
+										<div class="form__field-placeholder _upper">
+											<div>ИМЯ*</div>
+										</div>
+										<div class='form__field-error'></div>
+									</div>
+								</div>
+								<div class="form__field-inner">
+									<div class="form__field-input">
+										<input class='form__field-element input' name='phone'>
+										<div class="form__field-placeholder _upper">
+											<div>+7 (ХХХ) ХХХ-ХХ-ХХ*</div>
+										</div>
+										<div class='form__field-error'></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form__footer">
+					<div class="form__pps">
+					</div>
+					<div class="form__actions _center">
+						<button class="form__submit button button--main _main-button" type='submit' id=''>
+							<span>Заказать звонок</span>
+						</button>
+					</div>
+					<div class="form__policy">
+						<label class="form__policy-label">
+							<div class="form__policy-input">
+								<input type="checkbox" class='form__field-element form__field--checkboxses form__policy-check'
+									name='check'>
+								<div class="form__policy-fake-input"></div>
+							</div>
+							<div class="form__policy-text">Согласен с <a href="/" class="form__policy-link">публичной офертой</a>
+							</div>
+						</label>
+
+					</div>
+					<!-- <div class="form__field-inner">
+							<div class="form__field-input">
+								<div class='form__field-error'></div>
+							</div>
+						</div> -->
+				</div>
+			</form>
 		</div>
 	</div>
 	<script src="js/main.js"></script>

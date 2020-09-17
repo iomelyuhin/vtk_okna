@@ -104,86 +104,122 @@
 						<a href="/" class="breadcrumbs__link">Главная</a>
 					</li>
 					<li class="breadcrumbs__item">
-						<a href="/all-products.html" class="breadcrumbs__link">Окна и двери</a>
+						<a href="/all-products.html" class="breadcrumbs__link">Корзина</a>
 					</li>
 					
 				</ul>
 			</div>
 		</section>
 
-		<section class="section section--all-products">
-			<div class="all-products">
-				<div class="all-products__title _title">
-					<h1>Окна и двери</h1>
+		<section class="section section--cart">
+			<div class="cart">
+				<div class="cart__title _title">
+					<h1>Козина</h1>
 				</div>
-				<div class="all-products__content _wrapper">
-					<ul class="all-products__list">
-						<li class="all-products__item">
-							<a href="/windows.html" class="all-products__item-wrap">
-								<div class="all-products__item-bg" style="background-image: url('/img/content/product-01.png');">
-								</div>
-								<div class="all-products__item-info">
-									<div class="all-products__item-text">Пластиковые окна</div>
-								</div>
-							</a>
-						</li>
-						<li class="all-products__item">
-							<a href="/doors.html" class="all-products__item-wrap">
-								<div class="all-products__item-bg" style="background-image: url('/img/content/product-02.png');">
-								</div>
-								<div class="all-products__item-info">
-									
-									<div class="all-products__item-text">Пластиковые двери</div>
-								</div>
-							</a>
-						</li>
-						<li class="all-products__item">
-							<a href="#" class="all-products__item-wrap">
-								<div class="all-products__item-bg" style="background-image: url('/img/content/product-03.png');">
-								</div>
-								<div class="all-products__item-info">
-									<div class="all-products__item-text">Пластиковые раздвижные конструкции</div>
-								</div>
-							</a>
-						</li>
-						<li class="all-products__item">
-							<a href="#" class="all-products__item-wrap">
-								<div class="all-products__item-bg" style="background-image: url('/img/content/product-04.png');">
-								</div>
-								<div class="all-products__item-info">
-									<div class="all-products__item-text">Алюминиевые раздвижные конструкции</div>
-								</div>
-							</a>
-						</li>
-						<li class="all-products__item">
-							<a href="#" class="all-products__item-wrap">
-								<div class="all-products__item-bg" style="background-image: url('/img/content/product-05.png');">
-								</div>
-								<div class="all-products__item-info">
-									<div class="all-products__item-text">Комплектующие</div>
-								</div>
-							</a>
-						</li>
-						<li class="all-products__item">
-							<a href="#" class="all-products__item-wrap">
-								<div class="all-products__item-bg" style="background-image: url('/img/content/product-06.png');">
-								</div>
-								<div class="all-products__item-info">
-									<div class="all-products__item-text">Сетки</div>
-								</div>
-							</a>
-						</li>
-					</ul>
-					<div class="all-products__text-block">
-						<p>
-							Прародителем текста-рыбы является известный "Lorem Ipsum" – латинский текст, ноги которого растут аж из 45 года до нашей эры. Сервисов по созданию случайного текста на основе Lorem Ipsum великое множество, однако все они имеют один существенный недостаток: их "рыба текст" подходит лишь для англоязычных ресурсов/проектов. Мы же, фактически, предлагаем Lorem Ipsum на русском языке – вы можете использовать полученный здесь контент абсолютно бесплатно и в любых целях, не запрещённых законодательством. Однако в случае, если сгенерированный здесь текст используется в коммерческом или публичном проекте, ссылка на наш сервис обязательна. Подробнее о правилах использования
-</p>
-<p>Прародителем текста-рыбы является известный "Lorem Ipsum" – латинский текст, ноги которого растут аж из 45 года до нашей эры. Сервисов по созданию случайного текста на основе Lorem Ipsum великое множество, однако все они имеют один существенный недостаток: их "рыба текст" подходит лишь для англоязычных ресурсов/проектов. Мы же, фактически, предлагаем Lorem Ipsum на русском языке – вы можете использовать полученный здесь контент абсолютно бесплатно и в любых целях, не запрещённых законодательством. Однако в случае, если сгенерированный здесь текст используется в коммерческом или публичном проекте, ссылка на наш сервис обязательна. Подробнее о правилах использования
-						</p>
+				<div class="cart__content _wrapper">
+					<table class="cart__table">
+						<thead class="cart__table-head">
+							<tr>
+								<th></th>
+								<th class="cart__title-product">Товар</th>
+								<th>Стоимость</th>
+								<th>Количество</th>
+								<th class="cart__total-price-td">Сумма</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody class="cart__table-body">
+							<tr>
+								<td>
+									<div class="cart__image">
+										<img src="/img/content/additional-01.jpg" alt="" class="cart__img">
+									</div>
+								</td>
+								<td data-name="Товар">
+									<div class="cart__goods-title">
+										Ручка балконная Elementis, белая (2 части)
+									</div> 
+								</td>
+								<td data-name="Стоимость">
+									<div class="cart__price">66.19</div>
+								</td>
+								<td data-name="Количество">
+									<div class="cart__total-qty">
+										<button class="cart__total-qty-btn">-</button>
+										<input type="text" class="cart__total-qty-input" value="1">
+										<button class="cart__total-qty-btn">+</button>
+									</div>
+								</td>
+								<td class="cart__total-price-td" data-name="Сумма">
+									<div class="cart__total-price">66.19</div>
+								</td>
+								<td>
+									<button class="cart__remove-btn" type="button">
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="cart__image">
+										<img src="/img/content/additional-01.jpg" alt="" class="cart__img">
+									</div>
+								</td>
+								<td data-name="Товар">Ручка балконная Elementis, белая (2 части)</td>
+								<td data-name="Стоимость">
+									<div class="cart__price">66.19</div>
+								</td>
+								<td data-name="Количество">
+									<div class="cart__total-qty">
+										<button class="cart__total-qty-btn">-</button>
+										<input type="text" class="cart__total-qty-input" value="1">
+										<button class="cart__total-qty-btn">+</button>
+									</div>
+								</td>
+								<td class="cart__total-price-td" data-name="Сумма">
+									<div class="cart__total-price">66.19</div>
+								</td>
+								<td>
+									<button class="cart__remove-btn" type="button">
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="cart__image">
+										<img src="/img/content/additional-01.jpg" alt="" class="cart__img">
+									</div>
+								</td>
+								<td data-name="Товар">Ручка балконная Elementis, белая (2 части)</td>
+								<td data-name="Стоимость">
+									<div class="cart__price">66.19</div>
+								</td>
+								<td data-name="Количество">
+									<div class="cart__total-qty">
+										<button class="cart__total-qty-btn">-</button>
+										<input type="text" class="cart__total-qty-input" value="1">
+										<button class="cart__total-qty-btn">+</button>
+									</div>
+								</td>
+								<td class="cart__total-price-td" data-name="Сумма">
+									<div class="cart__total-price">66.19</div>
+								</td>
+								<td>
+									<button class="cart__remove-btn" type="button">
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="cart__summary">
+						<div class="cart__summary-price">Сумма заказа: <span>66.19 ₽</span></div>
+						<div class="cart__summary-button">
+							<button class="cart__summary-btn _main-button">Оформить заказ</button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+	
 		<div class="section section--footer section--footer-main section--all-products-footer all-products-footer">
 			<div class="footer _wrapper">
 				<div class="footer__row">
